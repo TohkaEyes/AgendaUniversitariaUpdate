@@ -35,6 +35,7 @@ public class Bloque {
         this.fecha = fecha;
         this.asignatura = null;
     }
+    
 
     public int getId() {
         return id;

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import cl.stomas.agendauniversitaria.vistas.AddDatesActivity;
 import cl.stomas.agendauniversitaria.vistas.AgendaActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,6 +18,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button btnHorario = findViewById(R.id.btnHorario);
+        Button btnAgenda= findViewById(R.id.btnAgenda);
+        btnAgenda.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AddDatesActivity.class);
+                startActivity(intent);
+            }
+        });
 
         btnHorario.setOnClickListener(new View.OnClickListener() {
             @Override

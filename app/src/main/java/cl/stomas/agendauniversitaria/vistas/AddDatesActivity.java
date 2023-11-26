@@ -1,6 +1,7 @@
 package cl.stomas.agendauniversitaria.vistas;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.Calendar;
 
+import cl.stomas.agendauniversitaria.MainActivity;
 import cl.stomas.agendauniversitaria.R;
 
 public class AddDatesActivity extends AppCompatActivity {
@@ -66,6 +68,8 @@ public class AddDatesActivity extends AppCompatActivity {
                 }else{
                     //aqui añadir la transferencia de los datos a la bd y el intent final
                     Toast.makeText(AddDatesActivity.this,"yippee", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(AddDatesActivity.this, MainActivity.class);
+                    startActivity(intent);
                 }
 
             }
